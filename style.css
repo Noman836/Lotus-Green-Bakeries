@@ -988,6 +988,12 @@ a.btn-link.text-light:after {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-section .col-lg-6 {
+    display: none !important;
+  }
+}
+
 @media (max-width: 576px) {
   .map-container {
     height: 250px !important;
