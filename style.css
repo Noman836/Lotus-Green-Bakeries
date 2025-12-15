@@ -992,6 +992,18 @@ a.btn-link.text-light:after {
   .hero-section .col-lg-6 {
     display: none !important;
   }
+  .hero-section {
+    background-image: url('images/4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .king-of-taste {
+    display: none !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1022,17 +1034,4 @@ a.btn-link.text-light:after {
   background-image: url('images/banner-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    background-image: url('images/4.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .king-of-taste {
-    display: none !important;
-  }
 }
