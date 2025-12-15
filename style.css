@@ -1035,3 +1035,77 @@ a.btn-link.text-light:after {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+/* Map Location Marker Styles */
+.map-container {
+  position: relative;
+}
+
+.map-link {
+  position: relative;
+  z-index: 1;
+}
+
+.location-marker-wrapper {
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+
+.location-marker {
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.location-marker:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(249, 95, 9, 0.4) !important;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 95, 9, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(249, 95, 9, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 95, 9, 0);
+  }
+}
+
+/* Custom Tooltip Styles */
+.tooltip {
+  font-size: 0.875rem;
+}
+
+.tooltip .tooltip-arrow {
+  border-top-color: #333 !important;
+}
+
+.tooltip .tooltip-inner {
+  background-color: #333;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  max-width: 250px;
+  text-align: left;
+  line-height: 1.4;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip .tooltip-inner br {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Map hover effect */
+.map-container:hover .location-marker {
+  animation: none;
+  transform: scale(1.15);
+}
+
+.map-container:hover .location-marker:hover {
+  transform: scale(1.2);
+}

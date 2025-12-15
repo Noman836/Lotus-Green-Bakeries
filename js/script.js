@@ -151,6 +151,24 @@
     });
   }
 
+  // init tooltips
+  var initTooltips = function() {
+    // Initialize Bootstrap tooltips after a small delay to ensure DOM is ready
+    setTimeout(function() {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      if (tooltipTriggerList.length > 0) {
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl, {
+            html: true,
+            placement: 'top',
+            trigger: 'hover focus',
+            delay: { show: 300, hide: 100 }
+          });
+        });
+      }
+    }, 500);
+  }
+
   // document ready
   $(document).ready(function() {
     
@@ -159,6 +177,7 @@
     initProductQty();
     initJarallax();
     initChocolat();
+    initTooltips();
 
   }); // End of a document
 
