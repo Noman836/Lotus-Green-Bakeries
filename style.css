@@ -1002,12 +1002,14 @@ a.btn-link.text-light:after {
     display: none !important;
   }
   .hero-section {
-    background-image: url('images/4.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    min-height: 100vh;
-    padding: 2rem 0;
+    background-image: url('images/4.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 100vh !important;
+    padding: 4rem 10rem !important;
+    margin: 0 !important;
+    width: 100% !important;
   }
   
   .king-of-taste {
@@ -1048,6 +1050,25 @@ a.btn-link.text-light:after {
   .mobile-menu-icons svg:hover {
     fill: #6BB252;
     transform: scale(1.1);
+  }
+  
+  /* Fix right side space issue */
+  .container-lg, .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove extra margins and fix spacing */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .col-lg-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -1100,7 +1121,7 @@ body {
 
 /* Adjust hero section margin for fixed header */
 .hero-section {
-  margin-top: -100px !important;
+  margin-top: -50px !important;
   padding-top: 100px !important;
 }
 
@@ -1418,7 +1439,9 @@ body {
   .slide-content p {
     font-size: 1rem;
   }
-  
+  .hero-section {
+ margin-top: 0px !important;
+  }
   .slider-btn {
     width: 40px;
     height: 40px;
