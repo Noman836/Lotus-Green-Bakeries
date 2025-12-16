@@ -1425,7 +1425,7 @@ a.btn-link.text-light:after {
   /* Replace background image to 4.png on mobile */
   .hero-section {
     background-image: url('images/4.png') !important;
-    background-size: cover !important;
+    background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
