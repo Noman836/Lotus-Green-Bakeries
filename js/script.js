@@ -169,6 +169,38 @@
     }, 500);
   }
 
+  // typing animation for Lotus Green Bakeries
+  var initTypingAnimation = function() {
+    var text = "Lotus Green Bakeries";
+    var typingElement = $('.typing-text');
+    
+    if (typingElement.length === 0) return;
+    
+    function typeWriter() {
+      typingElement.html('');
+      typingElement.removeClass('typing-hidden');
+      typingElement.addClass('typing-animation');
+      
+      var i = 0;
+      function type() {
+        if (i < text.length) {
+          typingElement.append(text.charAt(i));
+          i++;
+          setTimeout(type, 150);
+        } else {
+          setTimeout(function() {
+            typingElement.removeClass('typing-animation');
+            setTimeout(typeWriter, 1000);
+          }, 5000);
+        }
+      }
+      type();
+    }
+    
+    // Start animation after page load
+    setTimeout(typeWriter, 1000);
+  }
+
   // document ready
   $(document).ready(function() {
     
@@ -178,6 +210,7 @@
     initJarallax();
     initChocolat();
     initTooltips();
+    initTypingAnimation();
 
   }); // End of a document
 

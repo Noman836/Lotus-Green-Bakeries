@@ -2069,9 +2069,19 @@
                   
                   <!-- Location Marker with Tooltip -->
                   <div class="position-absolute top-50 start-50 translate-middle">
-                    <div class="location-marker-wrapper" data-bs-toggle="tooltip" data-bs-placement="top" title="Lotus Green Bakeries">
+                    <div class="location-marker-wrapper" onmouseover="showTooltip(event)" onmouseout="hideTooltip()">
                       <div class="bg-danger text-white rounded-circle p-3 shadow-lg location-marker">
                         <i class="fas fa-map-marker-alt fs-4"></i>
+                      </div>
+                      <!-- Custom Tooltip -->
+                      <div class="custom-tooltip" id="location-tooltip">
+                        <div class="tooltip-content">
+                          <strong>Lotus Green Bakeries</strong><br>
+                          123 Green Street<br>
+                          Organic City, OC 12345<br>
+                          Phone: (555) 123-4567
+                        </div>
+                        <div class="tooltip-arrow"></div>
                       </div>
                     </div>
                   </div>
@@ -2098,14 +2108,14 @@
                 <!-- Social Media Buttons -->
                 <div class="social-buttons d-grid gap-3 w-100">
                   <!-- Facebook Button -->
-                  <a href="https://facebook.com" target="_blank" class="btn btn-light btn-lg text-success fw-semibold d-flex align-items-center justify-content-center gap-3 hover-scale transition-all">
+                  <a href="https://www.facebook.com/share/1BnELoiKrN/" target="_blank" class="btn btn-light btn-lg text-success fw-semibold d-flex align-items-center justify-content-center gap-3 hover-scale transition-all">
                     <i class="fab fa-facebook-f fs-5"></i>
                     <span>Follow on Facebook</span>
                     <i class="fas fa-arrow-right ms-auto"></i>
                   </a>
                   
                   <!-- Instagram Button -->
-                  <a href="https://instagram.com" target="_blank" class="btn btn-light btn-lg text-success fw-semibold d-flex align-items-center justify-content-center gap-3 hover-scale transition-all">
+                  <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zxjv6cw" target="_blank" class="btn btn-light btn-lg text-success fw-semibold d-flex align-items-center justify-content-center gap-3 hover-scale transition-all">
                     <i class="fab fa-instagram fs-5"></i>
                     <span>Follow on Instagram</span>
                     <i class="fas fa-arrow-right ms-auto"></i>
@@ -2225,7 +2235,7 @@
         <div class="row footer-top">
           <div class="col-lg-6">
             <div class="footer-welcome">
-              <h4>Welcome to our Lotus Green Bakeries</h4>
+              <h4>Welcome to our <span id="typing-text"></span></h4>
               <p>News, Bakery Creation & Latest events in stores.</p>
             </div>
           </div>
@@ -2291,9 +2301,9 @@
           <div class="col-lg-6">
             <div class="footer-social">
               <div class="social-icons">
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@lotus.green.baker?_r=1&_t=ZS-92GGffXZMAu" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zxjv6cw" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1BnELoiKrN/" target="_blank"><i class="fab fa-facebook-f"></i></a>
               </div>
             </div>
           </div>
@@ -2305,46 +2315,142 @@
         </div>
       </div>
     </footer>
+    
+    <!-- WORKING Typing Animation -->
+    <script>
+    window.addEventListener('load', function() {
+        const text = "Lotus Green Bakeries";
+        const element = document.getElementById('typing-text');
+        let index = 0;
+        
+        function typeWriter() {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 500);
+            } else {
+                setTimeout(() => {
+                    element.textContent = '';
+                    index = 0;
+                    setTimeout(typeWriter, 1000);
+                }, 5000);
+            }
+        }
+        
+        // Start animation
+        setTimeout(typeWriter, 1000);
+    });
+    </script>
+    
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
 
+    <!-- Typing Animation Script -->
+    <script>
+    $(document).ready(function() {
+        var text = "Lotus Green Bakeries";
+        var typingElement = $('.typing-text');
+        
+        if (typingElement.length > 0) {
+            function typeWriter() {
+                typingElement.html('');
+                typingElement.removeClass('typing-hidden');
+                typingElement.addClass('typing-animation');
+                
+                var i = 0;
+                function type() {
+                    if (i < text.length) {
+                        typingElement.append(text.charAt(i));
+                        i++;
+                        setTimeout(type, 150);
+                    } else {
+                        setTimeout(function() {
+                            typingElement.removeClass('typing-animation');
+                            setTimeout(typeWriter, 1000);
+                        }, 5000);
+                    }
+                }
+                type();
+            }
+            
+            // Start animation after page load
+            setTimeout(typeWriter, 1000);
+        }
+    });
+    </script>
+    
     <!-- Tooltip Initialization Script -->
     <script>
-      // Initialize tooltips when DOM is ready
-      document.addEventListener('DOMContentLoaded', function() {
-        // Initialize tooltips
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl, {
-            html: true,
-            placement: 'top',
-            trigger: 'hover focus',
-            delay: { show: 300, hide: 100 }
-          });
-        });
-        
-        // Also initialize after window load to ensure everything is ready
-        window.addEventListener('load', function() {
-          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-          tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl, {
-              html: true,
-              placement: 'top',
-              trigger: 'hover focus',
-              delay: { show: 300, hide: 100 }
+      // Custom tooltip functions
+      function showTooltip(event) {
+        event.preventDefault();
+        const tooltip = document.getElementById('location-tooltip');
+        if (tooltip) {
+          tooltip.style.opacity = '1';
+          tooltip.style.visibility = 'visible';
+          tooltip.style.transform = 'translateX(-50%) translateY(-5px)';
+        }
+      }
+      
+      function hideTooltip() {
+        const tooltip = document.getElementById('location-tooltip');
+        if (tooltip) {
+          tooltip.style.opacity = '0';
+          tooltip.style.visibility = 'hidden';
+          tooltip.style.transform = 'translateX(-50%) translateY(0)';
+        }
+      }
+      
+      // Bootstrap tooltip fallback (if needed)
+      function initTooltips() {
+        try {
+          if (typeof bootstrap !== 'undefined') {
+            console.log('Bootstrap found, initializing tooltips...');
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            console.log('Found tooltip elements:', tooltipTriggerList.length);
+            
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+              var tooltip = new bootstrap.Tooltip(tooltipTriggerEl, {
+                html: true,
+                placement: 'top',
+                trigger: 'hover focus',
+                delay: { show: 0, hide: 0 }
+              });
+              console.log('Tooltip initialized for:', tooltipTriggerEl);
+              return tooltip;
             });
-          });
-        });
+          } else {
+            console.error('Bootstrap not found');
+          }
+        } catch (error) {
+          console.error('Error initializing tooltips:', error);
+        }
+      }
+      
+      // Initialize on DOM ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTooltips);
+      } else {
+        initTooltips();
+      }
+      
+      // Also try after window load
+      window.addEventListener('load', function() {
+        setTimeout(initTooltips, 100);
       });
+      
+      // Manual initialization as fallback
+      setTimeout(function() {
+        initTooltips();
+      }, 1000);
     </script>
     
     <!-- WhatsApp Integration Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // WhatsApp configuration
         const whatsappConfig = {
             phoneNumber: '+1234567890', // Replace with your actual WhatsApp number
             message: 'Hello! I found you through your website and would like to know more about your products.',
