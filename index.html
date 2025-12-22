@@ -261,7 +261,8 @@
 
     <header>
       <div class="container-fluid">
-        <div class="row py-3 border-bottom align-items-center">
+        <!-- Desktop Header -->
+        <div class="row py-3 border-bottom align-items-center d-none d-md-flex">
           
           <div class="col-sm-4 col-lg-3 text-center text-sm-start d-flex gap-3 justify-content-left justify-content-md-start">
             <div class="d-flex align-items-center my-3 my-sm-0">
@@ -283,10 +284,12 @@
                     All Categories
                   </button>
                   <ul class="dropdown-menu border-0 shadow" aria-labelledby="categoriesDropdown">
-                    <li><a class="dropdown-item" href="#">All Categories</a></li>
-                    <li><a class="dropdown-item" href="#">Groceries</a></li>
-                    <li><a class="dropdown-item" href="#">Drinks</a></li>
-                    <li><a class="dropdown-item" href="#">Chocolates</a></li>
+                    <li><a class="dropdown-item" href="#">Sweets</a></li>
+                    <li><a class="dropdown-item" href="#">Cakes</a></li>
+                    <li><a class="dropdown-item" href="#">Halwajaat</a></li>
+                    <li><a class="dropdown-item" href="#">Biscuits</a></li>
+                    <li><a class="dropdown-item" href="#">Breads & Rusk</a></li>
+                    <li><a class="dropdown-item" href="#">Drinks & Pizza</a></li>
                   </ul>
                 </div>
               </div>
@@ -304,43 +307,55 @@
             </div>
           </div>
 
-          <!-- <div class="col-lg-4">
-            <ul class="navbar-nav list-unstyled d-flex flex-row gap-3 gap-lg-5 justify-content-center flex-wrap align-items-center mb-0 fw-bold text-uppercase text-dark">
-              <li class="nav-item active">
-                <a href="index.html" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle pe-3" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu border-0 p-3 rounded-0 shadow" aria-labelledby="pages">
-                  <li><a href="about.html" class="dropdown-item">About Us <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="shop.html" class="dropdown-item">Shop <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="single-product.html" class="dropdown-item">Single Product <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="cart.html" class="dropdown-item">Cart <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="checkout.html" class="dropdown-item">Checkout <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="blog.html" class="dropdown-item">Blog <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="single-post.html" class="dropdown-item">Single Post <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="styles.html" class="dropdown-item">Styles <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="contact.html" class="dropdown-item">Contact <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="thank-you.html" class="dropdown-item">Thank You <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="account.html" class="dropdown-item">My Account <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                  <li><a href="404.html" class="dropdown-item">404 Error <span class="badge bg-dark text-light ms-2 fs-7">PRO</span></a></li>
-                </ul>
-              </li>
-            </ul>
-          </div> -->
-          
-     <div class="col-sm-8 col-lg-2 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
-  <!-- <ul class="d-flex justify-content-end list-unstyled m-0">
-    <li>
-      <a href="mailto:contact@lotusgreenbakery.com" class="p-2 mx-1" title="Email">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-      </a>
-    </li>
-  </ul> -->
-</div>
+          <div class="col-sm-8 col-lg-2 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
+          </div>
 
+        </div>
+
+        <!-- Mobile Header -->
+        <div class="row py-3 border-bottom align-items-center d-md-none">
+          <!-- Hamburger Menu -->
+          <div class="col-3 d-flex align-items-center justify-content-start">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#menu"></use></svg>
+            </button>
+          </div>
+          
+          <!-- Logo -->
+          <div class="col-6 d-flex align-items-center justify-content-center">
+            <a href="index.html" class="mobile-logo-center">
+              <img width="60" src="images/logo.jpg" alt="logo" class="img-fluid">
+            </a>
+          </div>
+          
+          <!-- Search Icon / Cross Icon -->
+          <div class="col-3 d-flex align-items-center justify-content-end">
+            <div class="mobile-search-container">
+              <button class="mobile-search-btn" id="mobileSearchBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" class="search-icon">
+                  <use xlink:href="#search"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="close-icon" style="display: none;">
+                  <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile Search Bar -->
+        <div class="row d-md-none mobile-search-bar" id="mobileSearchBar" style="display: none;">
+          <div class="col-12 py-3">
+            <form id="mobile-search-form" class="mobile-search-form">
+              <div class="mobile-search-input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" class="mobile-search-input-icon">
+                  <use xlink:href="#search"></use>
+                </svg>
+                <input id="" name="" type="text" class="form-control mobile-search-input" placeholder="Search Here">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </header>
@@ -356,7 +371,7 @@
               <a href="#" class="btn btn-primary text-uppercase fs-6 rounded-pill px-4 py-3 mt-3">Start Shopping</a>
               <a href="#" class="btn btn-dark text-uppercase fs-6 rounded-pill px-4 py-3 mt-3">Join Now</a>
             </div> -->
-            <div class="row my-5 count d-md-block d-none">
+            <div  class="row my-5 count d-md-block d-none">
               <div class="col">
                 <div class="row text-dark">
                   <div class="col-auto"><p class="fs-1 fw-bold lh-sm mb-0">11k+</p></div>
@@ -456,27 +471,27 @@
               <div class="swiper-wrapper">
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-1.jpg" class="rounded-circle" alt="Category Thumbnail">
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
+                  <h4 class="fs-6 mt-3 fw-normal category-title">Sweets</h4>
                 </a>
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-2.jpg" class="rounded-circle" alt="Category Thumbnail">
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Breads & Sweets</h4>
+                  <h4 class="fs-6 mt-3 fw-normal category-title">Cakes</h4>
                 </a>
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-3.jpg" class="rounded-circle" alt="Category Thumbnail">
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
+                  <h4 class="fs-6 mt-3 fw-normal category-title">Halwajaat</h4>
                 </a>
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-4.jpg" class="rounded-circle" alt="Category Thumbnail">
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Beverages</h4>
+                  <h4 class="fs-6 mt-3 fw-normal category-title">Biscuits</h4>
                 </a>
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-5.jpg" class="rounded-circle" alt="Category Thumbnail">
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Meat Products</h4>
+                  <h4 class="fs-6 mt-3 fw-normal category-title">Breads & Rusk</h4>
                 </a>
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-6.jpg" class="rounded-circle" alt="Category Thumbnail">
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Breads</h4>
+                  <h4 class="fs-6 mt-3 fw-normal category-title">Drinks & Pizza</h4>
                 </a>
                 <a href="category.html" class="nav-link swiper-slide text-center">
                   <img src="images/category-thumb-7.jpg" class="rounded-circle" alt="Category Thumbnail">
@@ -901,17 +916,17 @@
 
             <div class="banner-blocks">
             
-              <div class="banner-ad d-flex align-items-center large bg-info block-1" style="background: url('images/banner-newsletter.jpg') no-repeat; background-size: cover;">
+              <div class="banner-ad d-flex align-items-center large bg-info block-1" style="background: url('images/2.jpg') no-repeat; background-size: 100% 100%;">
                 <div class="banner-content p-5">
-                  <div class="content-wrapper text-light">
+                  <!-- <div class="content-wrapper text-light">
                     <h3 class="banner-title text-black">Items on SALE</h3>
                     <p class="text-dark">Discounts up to 30%</p>
                     <a href="#" class="btn-link text-white">Shop Now</a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               
-              <div class="banner-ad bg-success-subtle block-2" style="background:url('images/banner-ad-2.jpg') no-repeat;background-size: cover">
+              <div class="banner-ad bg-success-subtle block-2" style="background:url('images/3.jpg') no-repeat;background-size: cover">
                 <div class="banner-content align-items-center p-5">
                   <div class="content-wrapper text-light">
                     <h3 class="banner-title text-light">Combo offers</h3>
@@ -1317,7 +1332,7 @@
 
             <div class="section-header d-flex justify-content-between my-4">
               
-              <h2 class="section-title">Most popular products</h2>
+              <h2 class="section-title">Daily offer Products</h2>
 
               <div class="d-flex align-items-center">
                 <a href="#" class="btn btn-primary me-2">View All</a>
@@ -1330,316 +1345,39 @@
             
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
+      <div class="container">
+  <div class="row g-4">
 
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                                
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-15.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Sandwich Bread</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <!-- CARD 1 -->
+    <div class="col-md-4">
+      <div class="product-card" style="background-image:url('images/6.jpg')">
+        <!-- <div class="rating-box">
+          ⭐⭐⭐⭐☆
+        </div> -->
+      </div>
+    </div>
 
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-16.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <!-- CARD 2 -->
+    <div class="col-md-4">
+       <div class="product-card" style="background-image:url('images/5.jpg')">
+        <!--<div class="rating-box">
+          ⭐⭐⭐⭐☆
+        </div> -->
+      </div>
+    </div>
 
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-17.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Whole Wheat Sandwich Bread</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <!-- CARD 3 -->
+    <div class="col-md-4">
+      <div class="product-card" style="background-image:url('images/4.jpg')">
+        <!-- <div class="rating-box">
+          ⭐⭐⭐⭐☆
+        </div> -->
+      </div>
+    </div>
 
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-18.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  </div>
+</div>
 
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-19.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Sunstar Fresh Melon Juice</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-10.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Greek Style Plain Yogurt</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-11.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Pure Squeezed No Pulp Orange Juice</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-12.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Fresh Oranges</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product-item swiper-slide">
-                  <figure>
-                    <a href="single-product.html" title="Product Title">
-                      <img src="images/product-thumb-13.png" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">Gourmet Dark Chocolate Bars</h3>
-                    <div>
-                      <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span>
-                      <span>(222)</span>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div>
-                    <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Add to Cart</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                  
-              </div>
-            </div>
-            <!-- / products-carousel -->
-
-          </div>
-        </div>
       </div>
     </section>
 
@@ -2624,6 +2362,163 @@
                 lastScrollTop = scrollTop;
             }
         });
+    });
+    </script>
+
+    <!-- Mobile Search Toggle Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+        const desktopSearchBar = document.querySelector('.col-12.col-md-7.col-lg-8');
+        const searchIcon = mobileSearchBtn.querySelector('.search-icon');
+        const closeIcon = mobileSearchBtn.querySelector('.close-icon');
+        
+        if (mobileSearchBtn && desktopSearchBar) {
+            mobileSearchBtn.addEventListener('click', function() {
+                const isVisible = desktopSearchBar.classList.contains('show-search');
+                
+                if (isVisible) {
+                    // Hide search bar
+                    desktopSearchBar.classList.remove('show-search');
+                    searchIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    
+                    // Clear search input when closing
+                    const searchInput = desktopSearchBar.querySelector('input[type="text"]');
+                    if (searchInput) {
+                        searchInput.value = '';
+                    }
+                } else {
+                    // Show search bar
+                    desktopSearchBar.classList.add('show-search');
+                    searchIcon.style.display = 'none';
+                    closeIcon.style.display = 'block';
+                    
+                    // Focus on search input with slight delay
+                    const searchInput = desktopSearchBar.querySelector('input[type="text"]');
+                    if (searchInput) {
+                        setTimeout(() => {
+                            searchInput.focus();
+                        }, 100);
+                    }
+                }
+            });
+            
+            // Handle search form submission
+            const searchForm = document.getElementById('search-form');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const searchInput = this.querySelector('input[type="text"]');
+                    const searchTerm = searchInput.value.trim();
+                    
+                    if (searchTerm) {
+                        // Perform search functionality
+                        console.log('Searching for:', searchTerm);
+                        
+                        // You can implement actual search logic here:
+                        // 1. Redirect to search results page
+                        // window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+                        
+                        // 2. Or filter products on current page
+                        // performProductSearch(searchTerm);
+                        
+                        // For demonstration, show search result
+                        showSearchResult(searchTerm);
+                        
+                        // Close search after submission
+                        desktopSearchBar.classList.remove('show-search');
+                        searchIcon.style.display = 'block';
+                        closeIcon.style.display = 'none';
+                        searchInput.value = '';
+                    }
+                });
+            }
+            
+            // Close search when clicking outside
+            document.addEventListener('click', function(e) {
+                if (desktopSearchBar.classList.contains('show-search') && 
+                    !desktopSearchBar.contains(e.target) && 
+                    !mobileSearchBtn.contains(e.target)) {
+                    desktopSearchBar.classList.remove('show-search');
+                    searchIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    
+                    // Clear search input
+                    const searchInput = desktopSearchBar.querySelector('input[type="text"]');
+                    if (searchInput) {
+                        searchInput.value = '';
+                    }
+                }
+            });
+            
+            // Close search with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && desktopSearchBar.classList.contains('show-search')) {
+                    desktopSearchBar.classList.remove('show-search');
+                    searchIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    
+                    const searchInput = desktopSearchBar.querySelector('input[type="text"]');
+                    if (searchInput) {
+                        searchInput.value = '';
+                    }
+                }
+            });
+        }
+        
+        // Function to show search result (can be customized)
+        function showSearchResult(searchTerm) {
+            // Create a temporary notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: #6BB252;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                z-index: 9999;
+                box-shadow: 0 4px 12px rgba(107, 178, 82, 0.3);
+                opacity: 0;
+                transform: translateX(100%);
+                transition: all 0.3s ease;
+                max-width: 300px;
+            `;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0;">
+                        <use href="#search"></use>
+                    </svg>
+                    <div>
+                        <strong>Search Complete!</strong><br>
+                        <small>Searching for: "${searchTerm}"</small>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.opacity = '1';
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
     });
     </script>
   </body>

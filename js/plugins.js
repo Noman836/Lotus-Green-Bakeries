@@ -1,18 +1,93 @@
 /*------------------------------------*\
-   Plugins - Table of contents
+  Plugins - Table of contents
 \*------------------------------------*/
- /*
- - anime.js
- - Jarallax
- - Chocolat-1.0.4
- - jQuery Easing v1.3
+/*
+- anime.js
+- Jarallax
+- Chocolat-1.0.4
+- jQuery Easing v1.3
+- Mobile Search Toggle
 */
 
-/*
- anime.js
- 2017 Julian Garnier
- Released under the MIT license
-*/
+// Mobile Search Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+    const mobileSearchBar = document.getElementById('mobileSearchBar');
+    const searchIcon = mobileSearchBtn.querySelector('.search-icon');
+    const closeIcon = mobileSearchBtn.querySelector('.close-icon');
+    const mobileSearchInput = document.querySelector('.mobile-search-input');
+    
+    if (mobileSearchBtn && mobileSearchBar) {
+        mobileSearchBtn.addEventListener('click', function() {
+            const isSearchVisible = mobileSearchBar.style.display !== 'none';
+            
+            if (isSearchVisible) {
+                // Hide search bar
+                mobileSearchBar.classList.add('hiding');
+                setTimeout(() => {
+                    mobileSearchBar.style.display = 'none';
+                    mobileSearchBar.classList.remove('hiding');
+                }, 300);
+                
+                // Show search icon, hide close icon
+                searchIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+                
+                // Clear search input
+                if (mobileSearchInput) {
+                    mobileSearchInput.value = '';
+                }
+            } else {
+                // Show search bar
+                mobileSearchBar.style.display = 'block';
+                
+                // Show close icon, hide search icon
+                searchIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+                
+                // Focus on search input
+                setTimeout(() => {
+                    if (mobileSearchInput) {
+                        mobileSearchInput.focus();
+                    }
+                }, 300);
+            }
+        });
+        
+        // Handle search form submission
+        const mobileSearchForm = document.getElementById('mobile-search-form');
+        if (mobileSearchForm) {
+            mobileSearchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = mobileSearchInput.value.trim();
+                if (searchTerm) {
+                    // You can redirect to search results page or perform search
+                    console.log('Searching for:', searchTerm);
+                    // Example: window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
+                }
+            });
+        }
+        
+        // Close search when clicking outside
+        document.addEventListener('click', function(e) {
+            if (mobileSearchBar.style.display !== 'none' && 
+                !mobileSearchBar.contains(e.target) && 
+                !mobileSearchBtn.contains(e.target)) {
+                
+                mobileSearchBar.classList.add('hiding');
+                setTimeout(() => {
+                    mobileSearchBar.style.display = 'none';
+                    mobileSearchBar.classList.remove('hiding');
+                }, 300);
+                
+                searchIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        });
+    }
+});
+
+
 var $jscomp$this=this;
 (function(v,p){"function"===typeof define&&define.amd?define([],p):"object"===typeof module&&module.exports?module.exports=p():v.anime=p()})(this,function(){function v(a){if(!g.col(a))try{return document.querySelectorAll(a)}catch(b){}}function p(a){return a.reduce(function(a,d){return a.concat(g.arr(d)?p(d):d)},[])}function w(a){if(g.arr(a))return a;g.str(a)&&(a=v(a)||a);return a instanceof NodeList||a instanceof HTMLCollection?[].slice.call(a):[a]}function F(a,b){return a.some(function(a){return a===b})}
 function A(a){var b={},d;for(d in a)b[d]=a[d];return b}function G(a,b){var d=A(a),c;for(c in a)d[c]=b.hasOwnProperty(c)?b[c]:a[c];return d}function B(a,b){var d=A(a),c;for(c in b)d[c]=g.und(a[c])?b[c]:a[c];return d}function S(a){a=a.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(a,b,d,h){return b+b+d+d+h+h});var b=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(a);a=parseInt(b[1],16);var d=parseInt(b[2],16),b=parseInt(b[3],16);return"rgb("+a+","+d+","+b+")"}function T(a){function b(a,b,c){0>
