@@ -138,7 +138,7 @@ justify-content: end;
 
 .lotus-footer .footer-subscribe .form-control:focus {
   background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  /* border-color: rgba(255, 255, 255, 0.3); */
   color: #ffffff;
   box-shadow: none;
   outline: none;
