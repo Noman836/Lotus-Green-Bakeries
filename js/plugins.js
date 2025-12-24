@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 300);
                 
                 // Show search icon, hide close icon
-                searchIcon.style.display = 'none';
-                closeIcon.style.display = 'block';
+                searchIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
                 
                 // Clear search input
                 if (mobileSearchInput) {
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileSearchBar.style.display = 'block';
                 
                 // Show close icon, hide search icon
-                searchIcon.style.display = 'block';
-                closeIcon.style.display = 'hide';
+                searchIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
                 
                 // Focus on search input
                 setTimeout(() => {

@@ -143,7 +143,9 @@ justify-content: end;
   box-shadow: none;
   outline: none;
 }
-
+.hero{
+  padding-top: 80px !important;
+}
 .lotus-footer .btn-subscribe {
   background: #6BB252;
   color: #ffffff;
@@ -1186,7 +1188,7 @@ a.btn-link.text-light:after {
     animation: slideDown 0.3s ease-out;
     display: none;
     position: absolute;
-    top: 100%;
+    /* top: 100%; */
     left: 0;
     right: 0;
     width: 100%;
@@ -1371,11 +1373,7 @@ a.btn-link.text-light:after {
   }
 }
 
-/* Hero Section Responsive Styles */
-.hero-section {
-  margin-top: -50px !important;
-  /* padding-top: 100px !important; */
-}
+
 
 /* Hero Section Background Styles */
 .hero-section {
@@ -1403,7 +1401,7 @@ body {
 
 /* Adjust hero section margin for fixed header */
 .hero-section {
-  margin-top: -50px !important;
+  margin-top: 85px !important;
   padding-top: 100px !important;
 }
 
@@ -1725,9 +1723,7 @@ body {
   .slide-content p {
     font-size: 1rem;
   }
-  .hero-section {
- margin-top: 0px !important;
-  }
+
   .slider-btn {
     width: 40px;
     height: 40px;
