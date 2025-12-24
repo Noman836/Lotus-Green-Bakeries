@@ -1255,14 +1255,14 @@
     <section>
       <div class="container-lg">
 
-        <div class="bg-secondary text-light py-5 my-5" style="background: url('images/banner-newsletter.jpg') no-repeat; background-size: cover;">
+        <div class="bg-secondary text-light py-5 my-5" style="background: url('images/banner-newsletter.jpg') no-repeat; background-size: 100% 100%;">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-5 p-3">
                 <div class="section-header">
-                  <h2 class="section-title display-5 text-light">Get 25% Discount on your first purchase</h2>
+                  <h2 class="section-title display-5 text-black">Get 25% Discount on your first purchase</h2>
                 </div>
-                <p>Just Sign Up & Register it now to become member.</p>
+                <p class="text-black">Just Sign Up & Register it now to become member.</p>
               </div>
               <div class="col-md-5 p-3">
                 <form>
@@ -2484,6 +2484,64 @@
                 }, 300);
             }, 3000);
         }
+    });
+    </script>
+
+    <!-- Smooth Scroll for Cakes Category -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to handle smooth scrolling to featured-products section
+        function scrollToFeaturedProducts(e) {
+            e.preventDefault();
+            
+            const targetSection = document.getElementById('featured-products');
+            if (targetSection) {
+                // Calculate offset to account for fixed header
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight - 20; // 20px extra padding
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Find all Cakes category links and add click event listeners
+        const cakesLinks = document.querySelectorAll('a');
+        cakesLinks.forEach(link => {
+            // Check if the link text contains "Cakes" (case-insensitive)
+            if (link.textContent.trim().toLowerCase() === 'cakes') {
+                link.addEventListener('click', scrollToFeaturedProducts);
+            }
+        });
+        
+        // Also handle specific cases where the link might have different structure
+        // Header dropdown Cakes link
+        const headerCakesLink = document.querySelector('.dropdown-item');
+        if (headerCakesLink && headerCakesLink.textContent.trim() === 'Cakes') {
+            headerCakesLink.addEventListener('click', scrollToFeaturedProducts);
+        }
+        
+        // Category section Cakes links
+        const categoryCakesLinks = document.querySelectorAll('.category-title');
+        categoryCakesLinks.forEach(title => {
+            if (title.textContent.trim() === 'Cakes') {
+                const parentLink = title.closest('a');
+                if (parentLink) {
+                    parentLink.addEventListener('click', scrollToFeaturedProducts);
+                }
+            }
+        });
+        
+        // Footer Cakes link
+        const footerLinks = document.querySelectorAll('.footer-column a');
+        footerLinks.forEach(link => {
+            if (link.textContent.trim() === 'Cakes') {
+                link.addEventListener('click', scrollToFeaturedProducts);
+            }
+        });
     });
     </script>
   </body>
