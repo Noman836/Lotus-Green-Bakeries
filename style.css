@@ -1257,6 +1257,33 @@ a.btn-link.text-light:after {
   .mobile-menu-btn svg {
     color: #333;
   }
+  
+  /* Vertically center Swiper pagination dots in mobile view */
+  .swiper-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10 !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #6BB252 !important;
+    opacity: 0.5 !important;
+    margin: 0 !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #6BB252 !important;
+    opacity: 1 !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1614,7 +1641,11 @@ body {
   .slider-wrapper {
     height: 350px;
   }
-  
+  .swiper-pagination-bullet-active {
+    display: flex;
+    justify-items: center;
+    background-color: red !important;
+  }
   .slide-content {
     padding: 20px;
   }
