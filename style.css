@@ -1855,7 +1855,7 @@ body {
 /* Responsive adjustments for cake cards */
 @media (max-width: 768px) {
   .cake-image-wrapper {
-    height: 150px;
+    height: 200px;
   }
   
   .cake-name {
