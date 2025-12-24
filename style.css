@@ -1025,6 +1025,10 @@ a.btn-link.text-light:after {
   .hero-section .col-lg-6 {
     display: none !important;
   }
+  /* Category carousel mobile adjustments */
+.view-all {
+  display: none !important;
+}
   .hero-section {
     background-image: url('images/4.png') !important;
     background-repeat: no-repeat !important;
@@ -1284,6 +1288,30 @@ a.btn-link.text-light:after {
     background: #6BB252 !important;
     opacity: 1 !important;
   }
+  
+  /* Category carousel mobile adjustments */
+  .category-carousel .section-header .d-flex {
+    display: none !important;
+  }
+  
+  .category-carousel {
+    overflow: visible !important;
+  }
+  
+  .category-carousel .swiper-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  
+  .category-carousel .swiper-slide {
+    width: calc(48.333% - 10px) !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1307,9 +1335,39 @@ a.btn-link.text-light:after {
   .bg-success-gradient {
     padding: 3rem 2rem !important;
   }
+  
+  /* Category carousel mobile adjustments */
+  .category-carousel .section-header .d-flex {
+    display: none !important;
+  }
+  
+  .category-carousel {
+    overflow: visible !important;
+  }
+  
+  .category-carousel .swiper-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  
+  .category-carousel .swiper-slide {
+    width: calc(48.333% - 10px) !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
 }
 
 /* Hero Section Responsive Styles */
+.hero-section {
+  margin-top: -50px !important;
+  padding-top: 100px !important;
+}
+
+/* Hero Section Background Styles */
 .hero-section {
   background-image: url('images/banner-2.jpg');
   background-repeat: no-repeat;
