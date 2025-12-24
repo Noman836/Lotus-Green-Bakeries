@@ -1029,6 +1029,16 @@ a.btn-link.text-light:after {
 .view-all {
   display: none !important;
 }
+
+.lotus-footer .footer-column h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 160px;
+  width: 50px;
+  height: 3px;
+  background: #6BB252;
+}
   .hero-section {
     background-image: url('images/4.png') !important;
     background-repeat: no-repeat !important;
@@ -1364,7 +1374,7 @@ a.btn-link.text-light:after {
 /* Hero Section Responsive Styles */
 .hero-section {
   margin-top: -50px !important;
-  padding-top: 100px !important;
+  /* padding-top: 100px !important; */
 }
 
 /* Hero Section Background Styles */
@@ -1388,7 +1398,7 @@ header {
 
 /* Add top padding to body to account for fixed header */
 body {
-  padding-top: 100px !important;
+  /* padding-top: 100px !important; */
 }
 
 /* Adjust hero section margin for fixed header */
@@ -1775,5 +1785,357 @@ body {
   .slide img {
     width: 100% !important;
     max-width: 100% !important;
+  }
+}
+
+/* Cake Category Page Styles */
+.page-header {
+  background: linear-gradient(135deg, #6BB252 0%, #5a9a44 100%);
+  margin-top: -100px;
+  padding-top: 150px;
+}
+
+.category-title {
+  color: #6BB252;
+  margin-bottom: 0.5rem;
+}
+
+.category-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cake-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cake-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cake-card:hover .cake-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.cake-name {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cake-price {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.cake-category {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cake-category:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments for cake cards */
+@media (max-width: 768px) {
+  .cake-image-wrapper {
+    height: 150px;
+  }
+  
+  .cake-name {
+    font-size: 1rem;
+  }
+  
+  .cake-price {
+    font-size: 1.1rem;
+  }
+  
+  /* Center cake cards on mobile */
+  .cake-category .row {
+    justify-content: center;
+  }
+  
+  .cake-card {
+    text-align: center;
+  }
+  
+  .category-header {
+    text-align: center;
+  }
+  
+  /* Center page header on mobile */
+  .page-header {
+    text-align: center !important;
+  }
+  
+  .page-header .display-4 {
+    text-align: center !important;
+  }
+  
+  .page-header .lead {
+    text-align: center !important;
+  }
+  
+  .page-header .container-fluid .row {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .page-header .container-fluid .row > div {
+    text-align: center !important;
+  }
+}
+
+.lotus-header {
+  background: linear-gradient(135deg, #6BB252 0%, #5a9a44 100%);
+  color: white;
+  padding: 2rem 0;
+}
+
+.header-top {
+  margin-bottom: 2rem;
+}
+
+.header-welcome h4 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.header-welcome p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+.header-search form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-search input {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.header-search input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-search input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.header-search .btn-search {
+  background: white;
+  color: #6BB252;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-search .btn-search:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.header-middle {
+  margin-bottom: 2rem;
+}
+
+.header-column h5 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.header-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.header-column ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.header-column ul li a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.header-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+}
+
+.header-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-info .brand-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.brand-info .brand-tagline {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+  .header-top .row > div {
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-search form {
+    flex-direction: column;
+  }
+  
+  .header-search .btn-search {
+    width: 100%;
+  }
+  
+  .header-middle .row > div {
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-brand {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .brand-info .brand-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer Mobile Responsive - Center content under 768px */
+@media (max-width: 768px) {
+  .footer-top .row > div,
+  .footer-middle .row > div,
+  .footer-bottom .row > div {
+    text-align: center !important;
+    margin-bottom: 1.5rem;
+    justify-content: center !important;
+  }
+  
+  .footer-welcome h4,
+  .footer-column h5 {
+    text-align: center !important;
+  }
+  
+  .footer-subscribe form {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-subscribe input,
+  .footer-subscribe button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-copyright {
+    text-align: center !important;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  /* Additional strong centering for footer columns */
+  .footer-column {
+    text-align: center !important;
+  }
+  
+  .footer-column ul {
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  .footer-column ul li {
+    text-align: center !important;
+  }
+  
+  .footer-column h5 {
+    text-align: center !important;
+    margin-bottom: 1rem !important;
   }
 }
